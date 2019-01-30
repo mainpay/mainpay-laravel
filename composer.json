@@ -1,0 +1,23 @@
+{
+    "name": "mainpay/mainpay-laravel",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "mainpay/mainpay-php": "^1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "MainPay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MainPay\\Tests\\": "tests/"
+        }
+    }
+}
