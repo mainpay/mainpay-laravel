@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MainPay\\": "src/"
+            "MainPay\\Laravel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MainPay\\Tests\\": "tests/"
+            "MainPay\\Laravel\\Tests\\": "tests/"
         }
     }
 }
