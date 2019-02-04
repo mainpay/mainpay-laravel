@@ -3,6 +3,7 @@
 namespace MainPay\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+use MainPay\MainPay;
 
 class MainPayServiceProvider extends ServiceProvider
 {
@@ -33,5 +34,14 @@ class MainPayServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom($this->config_path, 'mainpay');
+
+        $this->app->singleton(MainPay::class, function () {
+            return new MainPay([
+                'server_key' => config('mainpay.server_key'),
+                'production' => config('mainpay.production'),
+            ]);
+        });
+
+        $this->app->alias(MainPay::class, 'mainpay');
     }
 }
