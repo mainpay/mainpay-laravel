@@ -1,0 +1,52 @@
+<?php
+
+namespace {{namespace}}Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class MainPayController extends Controller
+{
+    /**
+     * Handle the payment notification.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function notification(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Show finished payment page.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function finished(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Show unfinished payment page.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function unfinished(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Show error payment page.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function error(Request $request)
+    {
+        //
+    }
+}
