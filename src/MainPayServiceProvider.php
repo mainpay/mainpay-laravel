@@ -3,6 +3,7 @@
 namespace MainPay\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+use MainPay\Laravel\Console\ScaffoldCommand;
 use MainPay\MainPay;
 
 class MainPayServiceProvider extends ServiceProvider
@@ -24,6 +25,10 @@ class MainPayServiceProvider extends ServiceProvider
         $this->publishes([
             $this->config_path => config_path('mainpay.php'),
         ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([ScaffoldCommand::class]);
+        }
     }
 
     /**
