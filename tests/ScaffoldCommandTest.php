@@ -8,7 +8,7 @@ class ScaffoldCommandTest extends TestCase
 {
     protected $files;
 
-    protected function setUp()
+    protected function setUp() : void
     {
         parent::setUp();
 
@@ -26,7 +26,7 @@ class ScaffoldCommandTest extends TestCase
         $controller_path = app_path('Http/Controllers/MainPayController.php');
         $controller_content = $this->files->get($controller_path);
 
-        $this->assertContains('MainPay::routes()', $routes_content);
-        $this->assertContains('class MainPayController', $controller_content);
+        $this->assertStringContainsString('MainPay::routes()', $routes_content);
+        $this->assertStringContainsString('class MainPayController', $controller_content);
     }
 }
